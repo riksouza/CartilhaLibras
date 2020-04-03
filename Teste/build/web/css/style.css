@@ -1,4 +1,4 @@
-body {
+/* body {
   background: #031921;
   color: #fff;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
@@ -25,7 +25,7 @@ body {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
   display:flex;
-}
+} */
 
 #controller {
   display: block;
@@ -234,7 +234,7 @@ body {
     margin: 0;
   }
 
-  #game {
+  /* #game {
     width: 100%;
     position: fixed;
     touch-action: none;
@@ -246,7 +246,7 @@ body {
     width: 100% !important;
     height: auto !important;
   }
-}
+} */
 
 @media only screen and (max-device-width: 320px) and (orientation: portrait) {
   #controller_dpad {
@@ -304,4 +304,5 @@ body {
   #controller {
     display: none;
   }
+ } 
 }
