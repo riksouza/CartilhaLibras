@@ -245,7 +245,7 @@
     width: 100% !important;
     height: auto !important;
   } */
-}
+/* } */
 
 @media only screen and (max-device-width: 320px) and (orientation: portrait) {
   #controller_dpad {
@@ -277,11 +277,11 @@
   }
 }
 
-@media only screen and (max-device-width: 812px) and (orientation: landscape) {
+/* @media only screen and (max-device-width: 812px) and (orientation: landscape) {
   html,
   body {
     height: 100%;
-  }
+  } */
   /* body {
     display: flex;
     justify-content: center;
@@ -303,4 +303,4 @@
   #controller {
     display: none;
   }
-}
+/* } */
