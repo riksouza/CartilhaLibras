@@ -218,7 +218,7 @@
   }
 }
 
-@media only screen and (max-width: 640px) {
+/* @media only screen and (max-width: 640px) {
   #game canvas {
     margin-top: 0px;
     width: 100%;
@@ -231,7 +231,7 @@
 @media only screen and (max-device-width: 812px) and (orientation: portrait) {
   body {
     margin: 0;
-  }
+  } */
 
   /* #game {
     width: 100%;
