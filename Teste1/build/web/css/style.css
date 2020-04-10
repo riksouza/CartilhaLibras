@@ -1,4 +1,4 @@
-/* body {
+body {
   background: #031921;
   color: #fff;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
@@ -24,7 +24,7 @@
   image-rendering: -webkit-crisp-edges;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-} */
+}
 
 #controller {
   display: block;
@@ -218,7 +218,7 @@
   }
 }
 
-/* @media only screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
   #game canvas {
     margin-top: 0px;
     width: 100%;
@@ -231,9 +231,9 @@
 @media only screen and (max-device-width: 812px) and (orientation: portrait) {
   body {
     margin: 0;
-  } */
+  }
 
-  /* #game {
+  #game {
     width: 100%;
     position: fixed;
     touch-action: none;
@@ -244,8 +244,8 @@
     display: block;
     width: 100% !important;
     height: auto !important;
-  } */
-/* } */
+  }
+}
 
 @media only screen and (max-device-width: 320px) and (orientation: portrait) {
   #controller_dpad {
@@ -277,18 +277,18 @@
   }
 }
 
-/* @media only screen and (max-device-width: 812px) and (orientation: landscape) {
+@media only screen and (max-device-width: 812px) and (orientation: landscape) {
   html,
   body {
     height: 100%;
-  } */
-  /* body {
+  }
+  body {
     display: flex;
     justify-content: center;
     align-items: center;
-  } */
+  }
 
-  /* #game:after {
+  #game:after {
     content: "PLEASE ROTATE ↻";
     font-size: 24px;
     font-weight: bold;
@@ -298,9 +298,9 @@
   #game canvas {
     display: none;
     max-width: 480px;
-  } */
+  }
 
   #controller {
     display: none;
   }
-/* } */
+}
