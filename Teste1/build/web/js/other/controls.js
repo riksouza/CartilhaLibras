@@ -1,6 +1,7 @@
 const JS_KEY_ALT = 18;
 const JS_KEY_CTRL = 17;
 
+
 const DEADZONE = 0.1;
 
 var defaultKeys = {
