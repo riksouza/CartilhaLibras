@@ -4,13 +4,121 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <link rel="stylesheet" href="css/style.css" />
     <title>Teste1</title>
     <meta name="author" content="Ricardo" />
-    
-    
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<script type="text/javascript" src="https://www.google.com/jsapi=INSERT-YOUR-KEY"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript">
+
+
+
+  // Load the Google Onscreen Keyboard API
+  google.load("elements", "1", {
+      packages: "keyboard"
+  });
+
+  function onLoad() {
+    var kbd = new google.elements.keyboard.Keyboard(
+      [google.elements.keyboard.LayoutCode.BRAZILIAN_PORTUGUESE],
+      ['t1']);
+
+
+  }
+
+
+  function drawMenu() {
+html = ["<ul>"];
+for (var i in google.elements.keyboard.LayoutCode) {
+var code = google.elements.keyboard.LayoutCode[i];
+var name = google.elements.keyboard.getLayoutName(code);
+html.push("<li><a href='#' onclick='kbd.setLayout(\"", code, "\")'>", name, "</a></li>");
+}
+html.push("</ul>");
+document.getElementById("menu").innerHTML = html.join('');
+}
+
+ function toggleVisible() {
+ var button = document.getElementById('btVisible');
+ if (kbd.isVisible()) {
+ kbd.setVisible(false);
+ document.getElementById('btVisible').value = 'Show';
+ } else {
+ kbd.setVisible(true);
+ document.getElementById('btVisible').value = 'Hide';
+ }
+ }
+
+  google.setOnLoadCallback(onLoad);
+
+  
+</script>
+
+
   </head>
+ 
+ 
+  <div class="container">
+    <a href="../../../../CartilhaLibras/index.html">
+    <button type="button" class="btn btn-outline-primary" style="margin-bottom: 20px;">Início</button>
+  </a>
+  </div>
+
   <body>
+    <div id="app-6">
+      <p>{{ message }}</p>
+      <input v-model="message">
+    </div>
+
+    <script src="js/teste.js"></script>
+    
+    <!-- <div id="editor">
+      <textarea :value="input" @input="update"></textarea>
+      <div v-html="compiledMarkdown"></div>
+    </div> -->
+
+    <script>
+      new Vue({
+        el: "#editor",
+        data: {
+          input: "# hello"
+        },
+        computed: {
+          compiledMarkdown: function() {
+            return marked(this.input, { sanitize: true });
+          }
+        },
+        methods: {
+          update: _.debounce(function(e) {
+            this.input = e.target.value;
+          }, 300)
+        }
+      });
+    </script>
+
+      
+<!-- final -->
+
+
+<br/>
+  <textarea id="t1" style="width: 600px; height: 200px;"></textarea>
+
+
+
+    <div></div>       <br><br>
+
     <div id="gameboy_shell">
       <div id="game">
         <canvas id="mainCanvas" width="160" height="144">No Canvas Support</canvas>
@@ -40,5 +148,24 @@
     <script src="js/other/resize.js"></script>    
     <script src="js/GameBoyCore.js"></script>
     <script src="js/GameBoyIO.js"></script>
+
+
+
+    
+
+
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    
+     
   </body>
 </html>
