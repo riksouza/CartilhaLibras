@@ -4,12 +4,25 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+	  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	  
     <link rel="stylesheet" href="css/style.css" />
     <title>Teste1</title>
     <meta name="author" content="Ricardo" />
     
     
   </head>
+	
+	
+	<div class="container">
+    <a href="../../../../CartilhaLibras/index.html">
+    <button type="button" class="btn btn-outline-primary" style="margin-bottom: 20px;">Início</button>
+  </a>
+  </div>
+	
+	
   <body>
     <div id="gameboy_shell">
       <div id="game">
@@ -40,5 +53,21 @@
     <script src="js/other/resize.js"></script>    
     <script src="js/GameBoyCore.js"></script>
     <script src="js/GameBoyIO.js"></script>
+	  
+	  <!--Vlibras-->
+	  
+    <div vw class="enabled">
+      <div vw-access-button class="active"></div>
+      <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+      </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+	  <!--Vlibras-->
+	  
   </body>
 </html>
