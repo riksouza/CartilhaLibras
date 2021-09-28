@@ -4,125 +4,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-	  
-	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	  
     <link rel="stylesheet" href="css/style.css" />
     <title>Teste1</title>
     <meta name="author" content="Ricardo" />
     
-	  
-	  <!--React-->
-	  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-    <!--React-->
-	  
+    
   </head>
-	
-	<!--Botão Inicio-->
-	<div class="container">
-    <a href="../../../../CartilhaLibras/index.html">
-    <button type="button" class="btn btn-outline-primary" style="margin-bottom: 20px;">Início</button>
-  </a>
-  </div>
-	<!--Botão Inicio-->
-	
   <body>
-	 <!-- React-->
-	  
-	  <div id="todos-example"></div>
-
-<script type="text/babel">
-class TodoApp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { items: [], text: '' };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  render() {
-    return React.createElement(
-      "div",
-      null,
-      React.createElement(
-        "h3",
-        null,
-        "Texto Aqui"
-      ),
-      React.createElement(TodoList, { items: this.state.items }),
-      React.createElement(
-        "form",
-        { onSubmit: this.handleSubmit },
-        React.createElement(
-          "label",
-          { htmlFor: "new-todo" },
-          "Escreva:"
-        ),
-        React.createElement("input", {
-          id: "new-todo",
-          onChange: this.handleChange,
-          value: this.state.text
-        }),
-        React.createElement(
-          "button",
-          null,
-          "Add #",
-          this.state.items.length + 1
-        )
-      )
-    );
-  }
-
-  handleChange(e) {
-    this.setState({ text: e.target.value });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    if (this.state.text.length === 0) {
-      return;
-    }
-    const newItem = {
-      text: this.state.text,
-      id: Date.now()
-    };
-    this.setState(state => ({
-      items: state.items.concat(newItem),
-      text: ''
-    }));
-  }
-}
-
-class TodoList extends React.Component {
-  render() {
-    return React.createElement(
-      "ul",
-      null,
-      this.props.items.map(item => React.createElement(
-        "li",
-        { key: item.id },
-        item.text
-      ))
-    );
-  }
-}
-
-ReactDOM.render(React.createElement(TodoApp, null), document.getElementById('todos-example'));
-</script>
-
-	  
-	  <!-- React-->
-	  
-	  
-	  
-	  
-	  
-	  
-	  
-	  
     <div id="gameboy_shell">
       <div id="game">
         <canvas id="mainCanvas" width="160" height="144">No Canvas Support</canvas>
@@ -152,21 +40,5 @@ ReactDOM.render(React.createElement(TodoApp, null), document.getElementById('tod
     <script src="js/other/resize.js"></script>    
     <script src="js/GameBoyCore.js"></script>
     <script src="js/GameBoyIO.js"></script>
-	  
-	  <!--Vlibras-->
-	  
-    <div vw class="enabled">
-      <div vw-access-button class="active"></div>
-      <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-      </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
-    
-	  <!--Vlibras-->
-	  
   </body>
 </html>
